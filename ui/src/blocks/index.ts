@@ -173,6 +173,10 @@ export async function getToolBoxXml(extensions: Extension[]) {
     (await import('./pi/basic/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'basic', 'toolbox.xml'));
 
+    (await import('./pi/charlie/definitions')).default(Blockly.Blocks);
+    (await import('./pi/charlie/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'charlie', 'toolbox.xml'));
+
     (await import('./pi/variables/definitions')).default(Blockly.Blocks);
     (await import('./pi/variables/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'variables', 'toolbox.xml'));
