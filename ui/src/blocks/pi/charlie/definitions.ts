@@ -164,7 +164,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['m1Reversex'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('m1.forward(')
+        .appendField('m1.reverse(')
         .appendField(new Blockly.FieldTextInput('50'), 'm1ReverseSpeed')
         .appendField(')');
       this.setPreviousStatement(true, null);
@@ -178,7 +178,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['m1Stop'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Motor 1 Stop');
+        .appendField('m1.stop');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
@@ -218,7 +218,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['m2Stop'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Motor 2 Stop');
+        .appendField('m2.stop');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
