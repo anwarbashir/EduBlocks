@@ -1,8 +1,11 @@
-<category name="Charlie" colour="#ff0066" iconclass="blocklyTreeIconCustom charlie">
+<category name="Charlie" colour="#83c9c7" iconclass="blocklyTreeIconCustom charlie">
 
   <label text="Charlie" web-class="myLabelStyle"></label>
 
   <block type="start"></block>
+
+  <label text="Arrows" web-class="myLabelStyle"></label>
+
   <block type="arrow1_on"></block>
   <block type="arrow1_off"></block>
   <block type="arrow2_on"></block>
@@ -11,202 +14,31 @@
   <block type="arrow3_off"></block>
   <block type="arrow4_on"></block>
   <block type="arrow4_off"></block>
+
+  <label text="Obsticle Sensor" web-class="myLabelStyle"></label>
+  
   <block type="sonicCheck"></block>
-  <block type="ls1Check"></block>
-  <block type="ls2Check"></block>
+
+  <label text="Motors" web-class="myLabelStyle"></label>
+
   <block type="m1Forwardx"></block>
   <block type="m1Reversex"></block>
   <block type="m1Stop"></block>
   <block type="m2Forwardx"></block>
   <block type="m2Reversex"></block>
   <block type="m2Stop"></block>
+
+  <label text="Line Sensor" web-class="myLabelStyle"></label>
+
+  <block type="ls1Check"></block>
+  <block type="ls2Check"></block>
   <block type="both_onWhiteLine"></block>
   <block type="ls1_onBlackLine"></block>
   <block type="ls2_onBlackLine"></block>
+
+  <label text="Housekeeping" web-class="myLabelStyle"></label>
   <block type="try"></block>
   <block type="except"></block>
   <block type="GPIO_cleanup"></block>
-  
-  <block type="import_math"></block>
-  <block type="random"></block>
 
-  <label text="Statements" web-class="myLabelStyle"></label>
-  <block type="sleepnew">
-    <value name="sleep">
-      <shadow type="textinline">
-        <field name="text">1</field>
-      </shadow>
-    </value>
-  </block>
-
-  <block type="typeanything">
-    <value name="stuff">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
-  <!-- <block type="equalsblocknew">
-      <value name="text1">
-        <shadow type="textinline">
-          <field name="text">var</field>
-        </shadow>
-      </value>
-      <value name="text2">
-        <shadow type="textinline">
-          <field name="text">0</field>
-        </shadow>
-      </value>
-  </block> -->
-
-  <!-- <block type="textinline"></block> -->
-  <block type="varinlines">
-    <value name="value">
-      <shadow type="textinline">
-        <field name="text">1</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="df">
-    <value name="def">
-      <shadow type="textinline">
-        <field name="text">function_name</field>
-      </shadow>
-    </value>
-    <value name="params">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
-  <block type="pass"></block>
-
-  <block type="printnew">
-    <value name="text">
-      <shadow type="textinline">
-        <field name="text">Hello World</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="varprint">
-    <value name="var">
-      <shadow type="textinline">
-        <field name="text">Variable</field>
-      </shadow>
-    </value>
-  </block>
-
-  <label text="Logic" web-class="myLabelStyle"></label>
-  <block type="internal">
-    <value name="first">
-      <shadow type="textinline">
-        <field name="text">0</field>
-      </shadow>
-    </value>
-    <value name="last">
-      <shadow type="textinline">
-        <field name="text">0</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="andor">
-    <value name="first">
-      <shadow type="textinline">
-        <field name="text">True</field>
-      </shadow>
-    </value>
-    <value name="last">
-      <shadow type="textinline">
-        <field name="text">True</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="not">
-    <value name="bool">
-      <shadow type="textinline">
-        <field name="text">True</field>
-      </shadow>
-    </value>
-  </block>
-
-  <label text="Loops" web-class="myLabelStyle"></label>
-
-  <block type="whileout">
-    <value name="cond">
-      <shadow type="textinline">
-        <field name="text">True</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="for">
-    <value name="letter">
-      <shadow type="textinline">
-        <field name="text">i</field>
-      </shadow>
-    </value>
-    <value name="no">
-      <shadow type="textinline">
-        <field name="text">number</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="advancedforloops">
-    <value name="x">
-      <shadow type="textinline">
-        <field name="text">x</field>
-      </shadow>
-    </value>
-    <value name="y">
-      <shadow type="textinline">
-        <field name="text">y</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="break"></block>
-
-  <label text="Conditions" web-class="myLabelStyle"></label>
-  <block type="ifinline">
-    <value name="iftext">
-      <shadow type="textinline">
-        <field name="text">True</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="elifinline">
-    <value name="iftext">
-      <shadow type="textinline">
-        <field name="text">True</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="else"></block>
-
-
-  <label text="Definitions" web-class="myLabelStyle"></label>
-  <block type="define">
-    <value name="1">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-    <value name="2">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
-  <block type="return2">
-    <value name="return">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
-  <block type="class">
-    <value name="class">
-      <shadow type="textinline">
-        <field name="text">classname</field>
-      </shadow>
-    </value>
-  </block>
 </category>
