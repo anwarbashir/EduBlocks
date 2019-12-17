@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ $(whoami) == 'root' ]; then
-  echo 'Please do not run me as root'
-  exit 1
-fi
+#if [ $(whoami) == 'root' ]; then
+#  echo 'Please do not run me as root'
+#  exit 1
+#fi
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
