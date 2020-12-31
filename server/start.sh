@@ -15,7 +15,7 @@ SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 PROJECT_PATH=$SCRIPT_DIR
 
-NODE_PATH=$PROJECT_PATH/../bin/node
+NODE_PATH=/usr/bin/node
 
 # Make sure node isnt running somewhere...
 pkill node

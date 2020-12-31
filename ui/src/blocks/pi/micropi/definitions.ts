@@ -3,10 +3,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   var maincolour = "#83c9c7";
   var bordercolour = "#b7e0df";
   var inputcolour = "#83c9c7";
-  Blocks['start'] = {
+  Blocks['import micropi'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('start');
+        .appendField('import micropi');
       this.setPreviousStatement(false, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
@@ -14,144 +14,160 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow1_on'] = {
+
+  Blocks['oled'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(1).on');
+        .appendField('oled');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 1 on.');
+      this.setTooltip('Call OLED');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  };
+
+  Blocks['oled_setline'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('oled.setline(')
+        .appendField(new Blockly.FieldTextInput('1'), 'line')
+        .appendField(',')
+        .appendField('"')
+        .appendField(new Blockly.FieldTextInput('Hello World'), 'msg')
+        .appendField('"')
+        .appendField(')');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Write Text Line 1');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  };
+
+  Blocks['oled_reset'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('oled_reset');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Display Stats');
+      this.setHelpUrl('http://www.example.com/');
+    },
+};
+
+  Blocks['buzzer'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('buzzer');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Call Buzzer');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  };
+
+  Blocks['buzzer_start'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('buzzer_start');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Start Buzzer');
       this.setHelpUrl('http://www.example.com/');
     },
   };
   
-  Blocks['arrow1_off'] = {
+  Blocks['buzzer_stop'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(1).off');
+        .appendField('buzzer_stop');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 1 off.');
+      this.setTooltip('Stop Buzzer');
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow2_on'] = {
+
+  Blocks['pb1'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(2).on');
+        .appendField('pb1');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 2 on.');
+      this.setTooltip('Check for pb1');
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow2_off'] = {
+
+  Blocks['pb2'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(2).off');
+        .appendField('pb2');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 2 off.');
+      this.setTooltip('Check for pb2');
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow3_on'] = {
+
+  Blocks['led'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(3).on');
+        .appendField('led');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 3 on.');
+      this.setTooltip('Call led (neopixels)');
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow3_off'] = {
+
+  Blocks['led_on'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(3).off');
+        .appendField('led.set_color(')
+        .appendField(new Blockly.FieldTextInput('0'), 'led')
+        .appendField(',')
+        .appendField(new Blockly.FieldTextInput('255'), 'val1')
+        .appendField(',')
+        .appendField(new Blockly.FieldTextInput('0'), 'val2')
+        .appendField(',')
+        .appendField(new Blockly.FieldTextInput('0'), 'val3')
+        .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 3 off.');
+      this.setTooltip('Switch led (0 to 3) on and set colour');
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow4_on'] = {
+
+  Blocks['led_off'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('Arrow(4).on');
+        .appendField('led.set_color(')
+        .appendField(new Blockly.FieldTextInput('0'), 'led')
+        .appendField('0 , 0 , 0)');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 4 on.');
+      this.setTooltip('Switch led (0 to 3) off');
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['arrow4_off'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField('Arrow(4).off');
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Turns Arrow 4 off.');
-      this.setHelpUrl('http://www.example.com/');
-    },
-  };
-  
-  Blocks['sonicCheck'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField('Check sonic sensor');
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Check sonic sensor.');
-      this.setHelpUrl('http://www.example.com/');
-    },
-  };
-  
-  Blocks['ls1Check'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField('Check line sensor 1');
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Check line sensor 1.');
-      this.setHelpUrl('http://www.example.com/');
-    },
-  };
-  
-  Blocks['ls2Check'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField('Check line sensor 2');
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(maincolour, inputcolour, bordercolour);
-      this.setTooltip('Check line sensor 2.');
-      this.setHelpUrl('http://www.example.com/');
-    },
-  };
-  
-  Blocks['m1Forwardx'] = {
+
+  Blocks['m1_fwd'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('m1.forward(')
-        .appendField(new Blockly.FieldTextInput('60'), 'm1ForwardSpeed')
+        .appendField(new Blockly.FieldTextInput('60'), 'm1_Speed')
         .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -161,11 +177,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
   
-  Blocks['m1Reversex'] = {
+  Blocks['m1_rev'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('m1.reverse(')
-        .appendField(new Blockly.FieldTextInput('50'), 'm1ReverseSpeed')
+        .appendField(new Blockly.FieldTextInput('50'), 'm1_Speed')
         .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -175,7 +191,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
   
-  Blocks['m1Stop'] = {
+  Blocks['m1_stop'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('m1.stop');
@@ -187,11 +203,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
   
-  Blocks['m2Forwardx'] = {
+  Blocks['m2_fwd'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('m2.forward(')
-        .appendField(new Blockly.FieldTextInput('60'), 'm2ForwardSpeed')
+        .appendField(new Blockly.FieldTextInput('60'), 'm2_Speed')
         .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -201,11 +217,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
   
-  Blocks['m2Reversex'] = {
+  Blocks['m2_rev'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('m2.reverse(')
-        .appendField(new Blockly.FieldTextInput('50'), 'm2ReverseSpeed')
+        .appendField(new Blockly.FieldTextInput('50'), 'm2_Speed')
         .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -215,7 +231,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
   
-  Blocks['m2Stop'] = {
+  Blocks['m2_stop'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('m2.stop');
@@ -226,8 +242,44 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
-  Blocks['both_onWhiteLine'] = {
+
+  Blocks['sonic'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('sonic');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Check ultrasonic sensor');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  };
+
+  Blocks['ls1'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('ls1');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Check line sensor 1.');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  };
+
+  Blocks['ls2'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('ls2');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('Check line sensor 2.');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  }; 
+
+  Blocks['onWhite'] = {
     init: function () {
       this.appendDummyInput()
         .appendField('if')

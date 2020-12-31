@@ -1,0 +1,48 @@
+<category name="micro:Pi" colour="#83c9c7" iconclass="blocklyTreeIconCustom micropi">
+
+  <label text="micro:Pi" web-class="myLabelStyle"></label>
+  <block type="import micropi"></block>
+
+  <label text="OLED" web-class="myLabelStyle"></label>
+  <block type="oled"></block>
+  <block type="oled_setline"></block>
+  <block type="oled_reset"></block>
+
+  <label text="Buzzer" web-class="myLabelStyle"></label>
+  <block type="buzzer"></block>
+  <block type="buzzer_start"></block>
+  <block type="buzzer_stop"></block>
+
+  <label text="Buttons" web-class="myLabelStyle"></label>
+  <block type="pb1"></block>
+  <block type="pb2"></block>
+
+  <label text="LED (Neopixel)" web-class="myLabelStyle"></label>
+  <block type="led"></block>
+  <block type="led_on"></block>
+  <block type="led_off"></block>
+
+  <label text="Motors" web-class="myLabelStyle"></label>
+  <block type="m1_fwd"></block>
+  <block type="m1_rev"></block>
+  <block type="m1_stop"></block>
+  <block type="m2_fwd"></block>
+  <block type="m2_rev"></block>
+  <block type="m2_stop"></block>
+
+  <label text="Ultrasonic" web-class="myLabelStyle"></label>
+  <block type="sonic"></block>
+
+  <label text="Line Sensor" web-class="myLabelStyle"></label>
+  <block type="ls1"></block>
+  <block type="ls2"></block>
+  <block type="onWhite"></block>
+  <block type="ls1_onBlackLine"></block>
+  <block type="ls2_onBlackLine"></block>
+
+  <label text="Housekeeping" web-class="myLabelStyle"></label>
+  <block type="try"></block>
+  <block type="except"></block>
+  <block type="GPIO_cleanup"></block>
+
+</category>
