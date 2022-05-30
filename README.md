@@ -138,4 +138,4 @@ Ways to contribute
 
 We want to make EduBlocks a community project. We are open to people opening issues, giving us feedback on how we can improve and opening pull requests to add features or fixes to the project. The community plays a huge part in EduBlocks.
 
-I should add that this install required Pytrhon 2.7
+I should add that this install required Python 2.7
