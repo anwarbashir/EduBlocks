@@ -1,13 +1,12 @@
 export default function define(Python: Blockly.BlockGenerators) {
   Python['import micropi'] = function (block) {
-    const mpath = 'import sys\n' + 'sys.path.append("/home/pi/micropi/lib")\n';
     const micropi = 'from micropi import OLED, Buzzer, Buttons, LED, Motor, Sensor\n';
     const m1 = 'm1 = Motor("MOTOR1", 1)\n';
     const m2 = 'm2 = Motor("MOTOR2", 1)\n';
     const us = 'us = Sensor("ULTRASONIC", 10)\n';
     const ls1 = 'ls1 = Sensor("IR1", 0)\n';
     const ls2 = 'ls2 = Sensor("IR2", 0)\n';
-    const code = mpath + micropi + m1 + m2 + us + ls1 + ls2;
+    const code = micropi + m1 + m2 + us + ls1 + ls2;
     return code;
   };
 
